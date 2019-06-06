@@ -7,7 +7,9 @@ Morse code comprises of a series of dots and dashes corresponding to a particula
 
 The basic idea is to set a particular range of time period to interpret the signal as a dot, a dash or different kinds of spaces. At the instant when we start to push the button (positive edge) or leave the button (negative edge), a new clock will start and the time period of each clock will determine the sequence of dots and dashes. Using an asynchronous FSM, we detect the input sequence and the output can be generated using the FPGA and the character(s) can be displayed on the LCD Screen/ 7-Segment display.
 
-There are broadly two parts to this project: 1) Designing the FSM and 2) Coding the FSM using Verilog and implementing on the FPGA.
+There are broadly two parts to this project: 
+1. Designing the FSM 
+2. Coding the FSM using Verilog and implementing on the FPGA.
 
 ## Final Project Demonstration:
 In the final working model of the Morse code detector, the user can give the input using the push buttons present on the FPGA. The output on the LCD Screen/ 7-Segment Display will show what is being inputted through the push buttons.
