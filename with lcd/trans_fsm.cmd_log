@@ -1,0 +1,74 @@
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+bitgen -intstyle ise -f trans_fsm.ut trans_fsm.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+bitgen -intstyle ise -f trans_fsm.ut trans_fsm.ncd 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -bm rec_fsm.bmm -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf -ucf trans_constr.ucf 
+bitgen -intstyle ise -f trans_fsm.ut trans_fsm.ncd 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_constr.ucf -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf 
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/trans_fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "trans_fsm.ngc" trans_fsm.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o trans_fsm_map.ncd trans_fsm.ngd trans_fsm.pcf 
+par -w -intstyle ise -ol high -t 1 trans_fsm_map.ncd trans_fsm.ncd trans_fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml trans_fsm.twx trans_fsm.ncd -o trans_fsm.twr trans_fsm.pcf 

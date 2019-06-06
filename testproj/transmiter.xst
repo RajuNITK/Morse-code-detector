@@ -1,0 +1,5 @@
+set -tmpdir "C:/project/testproj/xst/projnav.tmp"
+set -xsthdpdir "C:/project/testproj/xst"
+elaborate
+-ifn transmiter.prj
+-ifmt mixed

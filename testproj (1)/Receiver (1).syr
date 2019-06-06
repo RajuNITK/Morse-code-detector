@@ -1,0 +1,221 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Reading design: Receiver.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Receiver.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Receiver"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : Receiver
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "clockdivider.v" in library work
+Compiling verilog file "trans.v" in library work
+Module <clockdivider> compiled
+Compiling verilog file "Receiver.v" in library work
+Module <transmiter> compiled
+Module <Receiver> compiled
+No errors in compilation
+Analysis of file <"Receiver.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Receiver> in library <work> with parameters.
+	A = "00001000"
+	B = "00000000"
+	C = "00110001"
+	D = "00000001"
+	E = "00110000"
+	EIGHT = "00000000"
+	F = "00111000"
+	FIVE = "00100100"
+	FOUR = "01001100"
+	G = "00100001"
+	H = "01001000"
+	I = "01111001"
+	J = "01000011"
+	K = "01001000"
+	L = "01110001"
+	M = "00000000"
+	N = "00000000"
+	NINE = "00001000"
+	O = "00000001"
+	ONE = "01001111"
+	P = "00011000"
+	Q = "00000000"
+	R = "00001000"
+	S = "00100100"
+	SEVEN = "00001111"
+	SIX = "00100000"
+	T = "01110000"
+	THREE = "00000110"
+	TWO = "00010010"
+	U = "01000001"
+	V = "00000000"
+	W = "00000000"
+	X = "00000000"
+	Y = "01000100"
+	Z = "00000000"
+	ZERO = "00000001"
+	reset_state = "11111111"
+
+Analyzing hierarchy for module <clockdivider> in library <work> with parameters.
+	cnst = "00000001011111010111100001000000"
+
+Analyzing hierarchy for module <transmiter> in library <work>.
+
+Analyzing hierarchy for module <clockdivider> in library <work> with parameters.
+	cnst = "00000001011111010111100001000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Receiver>.
+	A = 8'b00001000
+	B = 8'b00000000
+	C = 8'b00110001
+	D = 8'b00000001
+	E = 8'b00110000
+	EIGHT = 8'b00000000
+	F = 8'b00111000
+	FIVE = 8'b00100100
+	FOUR = 8'b01001100
+	G = 8'b00100001
+	H = 8'b01001000
+	I = 8'b01111001
+	J = 8'b01000011
+	K = 8'b01001000
+	L = 8'b01110001
+	M = 8'b00000000
+	N = 8'b00000000
+	NINE = 8'b00001000
+	O = 8'b00000001
+	ONE = 8'b01001111
+	P = 8'b00011000
+	Q = 8'b00000000
+	R = 8'b00001000
+	S = 8'b00100100
+	SEVEN = 8'b00001111
+	SIX = 8'b00100000
+	T = 8'b01110000
+	THREE = 8'b00000110
+	TWO = 8'b00010010
+	U = 8'b01000001
+	V = 8'b00000000
+	W = 8'b00000000
+	X = 8'b00000000
+	Y = 8'b01000100
+	Z = 8'b00000000
+	ZERO = 8'b00000001
+	reset_state = 8'b11111111
+ERROR:Xst:899 - "Receiver.v" line 108: The logic for <state> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+ERROR:Xst:899 - "Receiver.v" line 103: The logic for <next_state> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+ERROR:Xst:899 - "Receiver.v" line 108: The logic for <s_out> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+ 
+Found 3 error(s). Aborting synthesis.
+--> 
+
+Total memory usage is 283612 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

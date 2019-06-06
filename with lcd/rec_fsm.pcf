@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Apr 06 17:08:09 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "RS" LOCATE = SITE "B5" LEVEL 1;
+COMP "VEE" LOCATE = SITE "J3" LEVEL 1;
+COMP "VCCC" LOCATE = SITE "A3" LEVEL 1;
+COMP "RW" LOCATE = SITE "C6" LEVEL 1;
+COMP "s_out<0>" LOCATE = SITE "C5" LEVEL 1;
+COMP "serial_inp" LOCATE = SITE "G12" LEVEL 1;
+COMP "s_out<1>" LOCATE = SITE "B7" LEVEL 1;
+COMP "s_out<2>" LOCATE = SITE "A9" LEVEL 1;
+COMP "mid_clk" LOCATE = SITE "G1" LEVEL 1;
+COMP "s_out<3>" LOCATE = SITE "B9" LEVEL 1;
+COMP "s_out<4>" LOCATE = SITE "A10" LEVEL 1;
+COMP "s_out<5>" LOCATE = SITE "C9" LEVEL 1;
+COMP "VSS" LOCATE = SITE "B2" LEVEL 1;
+COMP "LEDN" LOCATE = SITE "D12" LEVEL 1;
+COMP "s_out<6>" LOCATE = SITE "C12" LEVEL 1;
+COMP "LEDP" LOCATE = SITE "C13" LEVEL 1;
+COMP "s_out<7>" LOCATE = SITE "A13" LEVEL 1;
+COMP "rst" LOCATE = SITE "C11" LEVEL 1;
+COMP "ENE" LOCATE = SITE "B6" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

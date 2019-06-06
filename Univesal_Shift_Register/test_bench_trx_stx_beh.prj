@@ -1,0 +1,5 @@
+verilog isim_temp "usr_trx.v"
+verilog isim_temp "Receiver.v"
+verilog isim_temp "Transmitter-Receiver.v"
+verilog isim_temp "test_bench_trx.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

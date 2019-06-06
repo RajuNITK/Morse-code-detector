@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\DELL\Desktop\sem 4\microcontroller\new_files_proj\rec_fsm.ncd
+OUTFILE=C:\Users\DELL\Desktop\sem 4\microcontroller\new_files_proj\rec_fsm.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=C:\Users\DELL\Desktop\sem 4\microcontroller\new_files_proj
+LICENSE=WebPack
+USER_INFO=211323676_0_0_439

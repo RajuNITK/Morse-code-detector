@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Univesal_Shift_Register.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Receiver.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Receiver.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Receiver.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Receiver_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Transmitter.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Transmitter.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Transmitter.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Transmitter_Receiver_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Transmitter_Receiver_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Transmitter_Receiver_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Transmitter_Receiver_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Transmitter_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Universal_shift_register.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Universal_shift_register.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Universal_shift_register.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Universal_shift_register.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Universal_shift_register.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Universal_shift_register.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Universal_shift_register.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Universal_shift_register.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Universal_shift_register_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Universal_shift_register_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Universal_shift_register_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Universal_shift_register_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_bench_trx_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_bench_trx_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_case_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_case_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="usr_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="usr_test_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="usr_trx.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="usr_trx.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="usr_trx.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="usr_trx_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1486136035" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1486136035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1486567892" xil_pn:in_ck="3901100894442499222" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1486567892">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Receiver.v"/>
+      <outfile xil_pn:name="Transmitter-Receiver.v"/>
+      <outfile xil_pn:name="Transmitter.v"/>
+      <outfile xil_pn:name="Universal_shift_register.v"/>
+      <outfile xil_pn:name="test_bench_trx.v"/>
+      <outfile xil_pn:name="test_case.v"/>
+      <outfile xil_pn:name="testbench.v"/>
+      <outfile xil_pn:name="usr_test.v"/>
+      <outfile xil_pn:name="usr_trx.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1486564525" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6812482138125166472" xil_pn:start_ts="1486564525">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1486564525" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="127965747792896458" xil_pn:start_ts="1486564525">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1486313493" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7871942692768591308" xil_pn:start_ts="1486313493">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1486314054" xil_pn:in_ck="8937211316846937938" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1486314054">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Receiver.v"/>
+      <outfile xil_pn:name="Transmitter-Receiver.v"/>
+      <outfile xil_pn:name="Transmitter.v"/>
+      <outfile xil_pn:name="Universal_shift_register.v"/>
+      <outfile xil_pn:name="test_bench_trx.v"/>
+      <outfile xil_pn:name="test_case.v"/>
+      <outfile xil_pn:name="usr_test.v"/>
+      <outfile xil_pn:name="usr_trx.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1486564532" xil_pn:in_ck="8937211316846937938" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7664701345261727951" xil_pn:start_ts="1486564525">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Transmitter_Receiver_beh.prj"/>
+      <outfile xil_pn:name="Transmitter_Receiver_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1486564532" xil_pn:in_ck="-5766906002962996762" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1062944129651491412" xil_pn:start_ts="1486564532">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Transmitter_Receiver_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4636563153870595085" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4967141431165438013" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8475369759126175921" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136021" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2464735643379648185" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1486136029" xil_pn:in_ck="4137357022702138686" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8756153281069897148" xil_pn:start_ts="1486136021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="Universal_shift_register.lso"/>
+      <outfile xil_pn:name="Universal_shift_register.ngc"/>
+      <outfile xil_pn:name="Universal_shift_register.ngr"/>
+      <outfile xil_pn:name="Universal_shift_register.prj"/>
+      <outfile xil_pn:name="Universal_shift_register.stx"/>
+      <outfile xil_pn:name="Universal_shift_register.syr"/>
+      <outfile xil_pn:name="Universal_shift_register.xst"/>
+      <outfile xil_pn:name="Universal_shift_register_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
+
+</generated_project>

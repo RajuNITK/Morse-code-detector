@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/70-82/Univesal_Shift_Register/Transmitter_Receiver_isim_beh.exe" -prj "D:/70-82/Univesal_Shift_Register/Transmitter_Receiver_beh.prj" "work.Transmitter_Receiver" "work.glbl" 

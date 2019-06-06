@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/student/Desktop/70-82/Univesal_Shift_Register/Universal_shift_register.xst" -ofn "C:/Users/student/Desktop/70-82/Univesal_Shift_Register/Universal_shift_register.syr" 

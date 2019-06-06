@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/project/testproj/transmiter.xst" -ofn "C:/project/testproj/transmiter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_test.ucf -p xc3s100e-cp132-5 transmiter.ngc transmiter.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o transmiter_map.ncd transmiter.ngd transmiter.pcf 
+par -w -intstyle ise -ol high -t 1 transmiter_map.ncd transmiter.ncd transmiter.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml transmiter.twx transmiter.ncd -o transmiter.twr transmiter.pcf -ucf trans_test.ucf 
+bitgen -intstyle ise -f transmiter.ut transmiter.ncd 
+xst -intstyle ise -ifn "C:/project/testproj/transmiter.xst" -ofn "C:/project/testproj/transmiter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_test.ucf -p xc3s100e-cp132-5 transmiter.ngc transmiter.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o transmiter_map.ncd transmiter.ngd transmiter.pcf 
+par -w -intstyle ise -ol high -t 1 transmiter_map.ncd transmiter.ncd transmiter.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml transmiter.twx transmiter.ncd -o transmiter.twr transmiter.pcf -ucf trans_test.ucf 
+bitgen -intstyle ise -f transmiter.ut transmiter.ncd 
+xst -intstyle ise -ifn "C:/project/testproj/transmiter.xst" -ofn "C:/project/testproj/transmiter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc trans_test.ucf -p xc3s100e-cp132-5 transmiter.ngc transmiter.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o transmiter_map.ncd transmiter.ngd transmiter.pcf 
+par -w -intstyle ise -ol high -t 1 transmiter_map.ncd transmiter.ncd transmiter.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml transmiter.twx transmiter.ncd -o transmiter.twr transmiter.pcf -ucf trans_test.ucf 
+bitgen -intstyle ise -f transmiter.ut transmiter.ncd 

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/clock_divider.xst" -ofn "C:/Users/DELL/Desktop/sem 4/microcontroller/new_files_proj/clock_divider.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "clock_divider.ngc" clock_divider.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o clock_divider_map.ncd clock_divider.ngd clock_divider.pcf 
+par -w -intstyle ise -ol high -t 1 clock_divider_map.ncd clock_divider.ncd clock_divider.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml clock_divider.twx clock_divider.ncd -o clock_divider.twr clock_divider.pcf 
+bitgen -intstyle ise -f clock_divider.ut clock_divider.ncd 

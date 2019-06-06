@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Apr 02 03:27:21 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "parallel_out<0>" LOCATE = SITE "M11" LEVEL 1;
+COMP "parallel_out<1>" LOCATE = SITE "M5" LEVEL 1;
+COMP "serial_inp" LOCATE = SITE "C11" LEVEL 1;
+COMP "mid_clk" LOCATE = SITE "N4" LEVEL 1;
+COMP "rst" LOCATE = SITE "G12" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

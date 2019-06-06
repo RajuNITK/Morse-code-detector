@@ -1,0 +1,5 @@
+set -tmpdir "D:/70-82/Univesal_Shift_Register/xst/projnav.tmp"
+set -xsthdpdir "D:/70-82/Univesal_Shift_Register/xst"
+elaborate
+-ifn usr_trx.prj
+-ifmt mixed

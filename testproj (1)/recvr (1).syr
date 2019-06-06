@@ -1,0 +1,541 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.46 secs
+ 
+--> Reading design: recvr.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "recvr.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "recvr"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : recvr
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "clockdivider.v" in library work
+Compiling verilog file "trans.v" in library work
+Module <clockdivider> compiled
+Compiling verilog file "recver.v" in library work
+Module <transmiter> compiled
+Module <recvr> compiled
+No errors in compilation
+Analysis of file <"recvr.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <recvr> in library <work> with parameters.
+	A = "00001000"
+	B = "00000000"
+	C = "00110001"
+	D = "00000001"
+	E = "00110000"
+	EIGHT = "00000000"
+	F = "00111000"
+	FIVE = "00100100"
+	FOUR = "01001100"
+	G = "00100001"
+	H = "01001000"
+	I = "01111001"
+	J = "01000011"
+	K = "01001000"
+	L = "01110001"
+	M = "00000000"
+	N = "00000000"
+	NINE = "00001000"
+	O = "00000001"
+	ONE = "01001111"
+	P = "00011000"
+	Q = "00000000"
+	R = "00001000"
+	S = "00100100"
+	SEVEN = "00001111"
+	SIX = "00100000"
+	T = "01110000"
+	THREE = "00000110"
+	TWO = "00010010"
+	U = "01000001"
+	V = "00000000"
+	W = "00000000"
+	X = "00000000"
+	Y = "01000100"
+	Z = "00000000"
+	ZERO = "00000001"
+	reset_state = "11111111"
+
+Analyzing hierarchy for module <clockdivider> in library <work> with parameters.
+	cnst = "00000001011111010111100001000000"
+
+Analyzing hierarchy for module <transmiter> in library <work>.
+
+Analyzing hierarchy for module <clockdivider> in library <work> with parameters.
+	cnst = "00000001011111010111100001000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <recvr>.
+	A = 8'b00001000
+	B = 8'b00000000
+	C = 8'b00110001
+	D = 8'b00000001
+	E = 8'b00110000
+	EIGHT = 8'b00000000
+	F = 8'b00111000
+	FIVE = 8'b00100100
+	FOUR = 8'b01001100
+	G = 8'b00100001
+	H = 8'b01001000
+	I = 8'b01111001
+	J = 8'b01000011
+	K = 8'b01001000
+	L = 8'b01110001
+	M = 8'b00000000
+	N = 8'b00000000
+	NINE = 8'b00001000
+	O = 8'b00000001
+	ONE = 8'b01001111
+	P = 8'b00011000
+	Q = 8'b00000000
+	R = 8'b00001000
+	S = 8'b00100100
+	SEVEN = 8'b00001111
+	SIX = 8'b00100000
+	T = 8'b01110000
+	THREE = 8'b00000110
+	TWO = 8'b00010010
+	U = 8'b01000001
+	V = 8'b00000000
+	W = 8'b00000000
+	X = 8'b00000000
+	Y = 8'b01000100
+	Z = 8'b00000000
+	ZERO = 8'b00000001
+	reset_state = 8'b11111111
+Module <recvr> is correct for synthesis.
+ 
+Analyzing module <clockdivider> in library <work>.
+	cnst = 32'sb00000001011111010111100001000000
+Module <clockdivider> is correct for synthesis.
+ 
+Analyzing module <transmiter> in library <work>.
+Module <transmiter> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <state> in unit <recvr> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <next_state> in unit <recvr> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <clockdivider>.
+    Related source file is "clockdivider.v".
+    Found 1-bit register for signal <out_clk>.
+    Found 32-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clockdivider> synthesized.
+
+
+Synthesizing Unit <transmiter>.
+    Related source file is "trans.v".
+    Found 1-bit register for signal <parallel_out0>.
+    Found 1-bit register for signal <parallel_out1>.
+    Found 3-bit register for signal <q>.
+    Found 1-bit xor2 for signal <q_1$xor0000> created at line 47.
+    Found 1-bit xor2 for signal <q_2$xor0000> created at line 46.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <transmiter> synthesized.
+
+
+Synthesizing Unit <recvr>.
+    Related source file is "recver.v".
+WARNING:Xst:1306 - Output <s_out> is never assigned.
+WARNING:Xst:1306 - Output <en> is never assigned.
+WARNING:Xst:646 - Signal <state> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <next_state> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mod_pin> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <high> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <recvr> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 7
+ 1-bit register                                        : 7
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <transmiter_b> is unconnected in block <recvr>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <recvr> ...
+
+Optimizing unit <transmiter> ...
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_31> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_30> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_29> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_28> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_27> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_26> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_25> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_24> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_23> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_22> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_21> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_20> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_19> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_18> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_17> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_16> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_15> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_14> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_13> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_12> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_11> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_10> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_9> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_8> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_7> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_6> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_5> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_4> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_3> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_2> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_1> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/count_0> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/clockdivide_a/out_clk> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/parallel_out0> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/parallel_out1> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/q_0> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/q_1> of sequential type is unconnected in block <recvr>.
+WARNING:Xst:2677 - Node <transmiter_b/q_2> of sequential type is unconnected in block <recvr>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block recvr, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : recvr.ngr
+Top Level Output File Name         : recvr
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 146
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 31
+#      LUT2                        : 32
+#      LUT4                        : 8
+#      MUXCY                       : 39
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 33
+#      FDC                         : 32
+#      FDCE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       39  out of    960     4%  
+ Number of Slice Flip Flops:             33  out of   1920     1%  
+ Number of 4 input LUTs:                 73  out of   1920     3%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                   3  out of     83     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 33    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 33    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.560ns (Maximum Frequency: 179.841MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.063ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.560ns (frequency: 179.841MHz)
+  Total number of paths / destination ports: 1585 / 34
+-------------------------------------------------------------------------
+Delay:               5.560ns (Levels of Logic = 33)
+  Source:            clockdivide_a/count_1 (FF)
+  Destination:       clockdivide_a/count_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clockdivide_a/count_1 to clockdivide_a/count_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.532  clockdivide_a/count_1 (clockdivide_a/count_1)
+     LUT1:I0->O            1   0.612   0.000  clockdivide_a/Mcount_count_cy<1>_rt (clockdivide_a/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  clockdivide_a/Mcount_count_cy<1> (clockdivide_a/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<2> (clockdivide_a/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<3> (clockdivide_a/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<4> (clockdivide_a/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<5> (clockdivide_a/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<6> (clockdivide_a/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<7> (clockdivide_a/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<8> (clockdivide_a/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<9> (clockdivide_a/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<10> (clockdivide_a/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<11> (clockdivide_a/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<12> (clockdivide_a/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<13> (clockdivide_a/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<14> (clockdivide_a/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<15> (clockdivide_a/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<16> (clockdivide_a/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<17> (clockdivide_a/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<18> (clockdivide_a/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<19> (clockdivide_a/Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<20> (clockdivide_a/Mcount_count_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<21> (clockdivide_a/Mcount_count_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<22> (clockdivide_a/Mcount_count_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<23> (clockdivide_a/Mcount_count_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<24> (clockdivide_a/Mcount_count_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<25> (clockdivide_a/Mcount_count_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<26> (clockdivide_a/Mcount_count_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<27> (clockdivide_a/Mcount_count_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<28> (clockdivide_a/Mcount_count_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  clockdivide_a/Mcount_count_cy<29> (clockdivide_a/Mcount_count_cy<29>)
+     MUXCY:CI->O           0   0.052   0.000  clockdivide_a/Mcount_count_cy<30> (clockdivide_a/Mcount_count_cy<30>)
+     XORCY:CI->O           1   0.699   0.426  clockdivide_a/Mcount_count_xor<31> (Result<31>)
+     LUT2:I1->O            1   0.612   0.000  clockdivide_a/Mcount_count_eqn_311 (clockdivide_a/Mcount_count_eqn_31)
+     FDC:D                     0.268          clockdivide_a/count_31
+    ----------------------------------------
+    Total                      5.560ns (4.603ns logic, 0.958ns route)
+                                       (82.8% logic, 17.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            clockdivide_a/out_clk (FF)
+  Destination:       mid_clk (PAD)
+  Source Clock:      clk rising
+
+  Data Path: clockdivide_a/out_clk to mid_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.380  clockdivide_a/out_clk (clockdivide_a/out_clk)
+     OBUF:I->O                 3.169          mid_clk_OBUF (mid_clk)
+    ----------------------------------------
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.81 secs
+ 
+--> 
+
+Total memory usage is 290620 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

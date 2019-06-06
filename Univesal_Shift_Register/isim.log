@@ -1,0 +1,15 @@
+ISim log file
+Running: D:\70-82\Univesal_Shift_Register\Transmitter_Receiver_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/70-82/Univesal_Shift_Register/Transmitter_Receiver_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "D:/70-82/Univesal_Shift_Register/Transmitter-Receiver.v" Line 23.  For instance Transmitter_Receiver/trasmitter_part/, width 2 of formal port select is not equal to width 1 of actual signal select1.
+WARNING: File "D:/70-82/Univesal_Shift_Register/Transmitter-Receiver.v" Line 23.  For instance Transmitter_Receiver/receiver_part/, width 2 of formal port select is not equal to width 1 of actual signal select2.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

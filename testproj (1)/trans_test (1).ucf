@@ -1,0 +1,6 @@
+#NET "clk" LOC = "B8";
+#NET "rst" LOC = "G12";
+#NET "mid_clk" LOC = "N4";
+#NET "serial_inp" LOC = "C11";
+#NET "parallel_out1" LOC = "M5";
+#NET "parallel_out0" LOC = "M11";

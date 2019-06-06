@@ -1,0 +1,493 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: trans_fsm.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "trans_fsm.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "trans_fsm"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : trans_fsm
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "clock_divider.v" in library work
+Compiling verilog file "trans_fsm.v" in library work
+Module <clock_divider> compiled
+Module <trans_fsm> compiled
+No errors in compilation
+Analysis of file <"trans_fsm.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <trans_fsm> in library <work> with parameters.
+	s0 = "0000"
+	s1 = "0001"
+	s2 = "0010"
+	s3 = "0011"
+	s4 = "0100"
+	s5 = "0101"
+	s6 = "0110"
+	s7 = "0111"
+	s8 = "1000"
+
+Analyzing hierarchy for module <clock_divider> in library <work> with parameters.
+	cnst = "00000001011111010111100001000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <trans_fsm>.
+	s0 = 4'b0000
+	s1 = 4'b0001
+	s2 = 4'b0010
+	s3 = 4'b0011
+	s4 = 4'b0100
+	s5 = 4'b0101
+	s6 = 4'b0110
+	s7 = 4'b0111
+	s8 = 4'b1000
+Module <trans_fsm> is correct for synthesis.
+ 
+Analyzing module <clock_divider> in library <work>.
+	cnst = 32'sb00000001011111010111100001000000
+Module <clock_divider> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "clock_divider.v".
+    Found 1-bit register for signal <out_clk>.
+    Found 32-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clock_divider> synthesized.
+
+
+Synthesizing Unit <trans_fsm>.
+    Related source file is "trans_fsm.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 9                                              |
+    | Clock              | mid_clk                   (rising_edge)        |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit register for signal <parallel_out>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 D-type flip-flop(s).
+Unit <trans_fsm> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 2-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:9]> with one-hot encoding.
+--------------------
+ State | Encoding
+--------------------
+ 0000  | 000000001
+ 0001  | 000000010
+ 0010  | 000001000
+ 0011  | 000010000
+ 0100  | 000100000
+ 0101  | 001000000
+ 0110  | 010000000
+ 0111  | 000000100
+ 1000  | 100000000
+--------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <trans_fsm> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block trans_fsm, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : trans_fsm.ngr
+Top Level Output File Name         : trans_fsm
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 159
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 31
+#      LUT2                        : 37
+#      LUT3                        : 1
+#      LUT4                        : 13
+#      MUXCY                       : 39
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 44
+#      FD                          : 4
+#      FDC                         : 32
+#      FDCE                        : 1
+#      FDR                         : 3
+#      FDRS                        : 2
+#      FDS                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       47  out of    960     4%  
+ Number of Slice Flip Flops:             44  out of   1920     2%  
+ Number of 4 input LUTs:                 84  out of   1920     4%  
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of     83     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 33    |
+clk_trans/out_clk                  | NONE(state_FSM_FFd3)   | 11    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 33    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.560ns (Maximum Frequency: 179.841MHz)
+   Minimum input arrival time before clock: 2.835ns
+   Maximum output required time after clock: 4.063ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.560ns (frequency: 179.841MHz)
+  Total number of paths / destination ports: 1585 / 34
+-------------------------------------------------------------------------
+Delay:               5.560ns (Levels of Logic = 33)
+  Source:            clk_trans/count_1 (FF)
+  Destination:       clk_trans/count_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clk_trans/count_1 to clk_trans/count_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.532  clk_trans/count_1 (clk_trans/count_1)
+     LUT1:I0->O            1   0.612   0.000  clk_trans/Mcount_count_cy<1>_rt (clk_trans/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  clk_trans/Mcount_count_cy<1> (clk_trans/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<2> (clk_trans/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<3> (clk_trans/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<4> (clk_trans/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<5> (clk_trans/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<6> (clk_trans/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<7> (clk_trans/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<8> (clk_trans/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<9> (clk_trans/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<10> (clk_trans/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<11> (clk_trans/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<12> (clk_trans/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<13> (clk_trans/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<14> (clk_trans/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<15> (clk_trans/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<16> (clk_trans/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<17> (clk_trans/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<18> (clk_trans/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<19> (clk_trans/Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<20> (clk_trans/Mcount_count_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<21> (clk_trans/Mcount_count_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<22> (clk_trans/Mcount_count_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<23> (clk_trans/Mcount_count_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<24> (clk_trans/Mcount_count_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<25> (clk_trans/Mcount_count_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<26> (clk_trans/Mcount_count_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<27> (clk_trans/Mcount_count_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<28> (clk_trans/Mcount_count_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  clk_trans/Mcount_count_cy<29> (clk_trans/Mcount_count_cy<29>)
+     MUXCY:CI->O           0   0.052   0.000  clk_trans/Mcount_count_cy<30> (clk_trans/Mcount_count_cy<30>)
+     XORCY:CI->O           1   0.699   0.426  clk_trans/Mcount_count_xor<31> (Result<31>)
+     LUT2:I1->O            1   0.612   0.000  clk_trans/Mcount_count_eqn_311 (clk_trans/Mcount_count_eqn_31)
+     FDC:D                     0.268          clk_trans/count_31
+    ----------------------------------------
+    Total                      5.560ns (4.603ns logic, 0.958ns route)
+                                       (82.8% logic, 17.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_trans/out_clk'
+  Clock period: 3.336ns (frequency: 299.733MHz)
+  Total number of paths / destination ports: 38 / 15
+-------------------------------------------------------------------------
+Delay:               3.336ns (Levels of Logic = 3)
+  Source:            state_FSM_FFd8 (FF)
+  Destination:       parallel_out_0 (FF)
+  Source Clock:      clk_trans/out_clk rising
+  Destination Clock: clk_trans/out_clk rising
+
+  Data Path: state_FSM_FFd8 to parallel_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.603  state_FSM_FFd8 (state_FSM_FFd8)
+     LUT4:I0->O            2   0.612   0.449  parallel_out_mux0000<1>25 (parallel_out_mux0000<0>25)
+     LUT4:I1->O            1   0.612   0.000  parallel_out_mux0000<1>3811 (parallel_out_mux0000<1>381)
+     MUXF5:I0->O           1   0.278   0.000  parallel_out_mux0000<1>381_f5 (parallel_out_mux0000<1>38)
+     FDS:D                     0.268          parallel_out_0
+    ----------------------------------------
+    Total                      3.336ns (2.284ns logic, 1.052ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_trans/out_clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              2.835ns (Levels of Logic = 2)
+  Source:            serial_inp (PAD)
+  Destination:       state_FSM_FFd3 (FF)
+  Destination Clock: clk_trans/out_clk rising
+
+  Data Path: serial_inp to state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.106   0.849  serial_inp_IBUF (serial_inp_IBUF)
+     LUT2:I0->O            1   0.612   0.000  state_FSM_FFd4-In1 (state_FSM_FFd4-In)
+     FD:D                      0.268          state_FSM_FFd4
+    ----------------------------------------
+    Total                      2.835ns (1.986ns logic, 0.849ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_trans/out_clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            parallel_out_1 (FF)
+  Destination:       parallel_out<1> (PAD)
+  Source Clock:      clk_trans/out_clk rising
+
+  Data Path: parallel_out_1 to parallel_out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.514   0.380  parallel_out_1 (parallel_out_1)
+     OBUF:I->O                 3.169          parallel_out_1_OBUF (parallel_out<1>)
+    ----------------------------------------
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.60 secs
+ 
+--> 
+
+Total memory usage is 291500 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
